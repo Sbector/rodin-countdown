@@ -1,3 +1,3 @@
 function pushButton() {
-  document.getElementById("demo").innerHTML = "Puto";
+  window.alert("puto");
 }
