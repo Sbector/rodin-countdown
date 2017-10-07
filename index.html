@@ -5,13 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>rodin-countdown</title>
+	<title>Public Domain Countdown</title>
 
 	<script src="libraries/p5.js"></script>
 	<script src="libraries/p5.dom.js"></script>
 	<script src="libraries/p5.sound.js"></script>
 	<script src="sketch.js"></script>
 	<script src="script.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<style>
 		body {
@@ -24,8 +26,15 @@
 		}
 	</style>
 </head>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  })
+})	
+</script>
 <body>
-	<p id="demo"></p>
-	<button type="button" onclick="tiempo()">Pruebame</button>
+	<p id="demo">Putini</p>
+	<!-- <button type="button" onclick="tiempo()">Pruebame</button> -->
 </body>
 </html>
