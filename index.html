@@ -28,10 +28,10 @@
 </head>
 <script>
 $(document).ready(function(){
-  $("p").click(function(){
+  $("p").on('click touchstart', function(){
     $(this).hide();
   })
-})	
+})
 </script>
 <body>
 	<p id="demo">Putini</p>
