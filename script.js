@@ -1,3 +1,3 @@
-function pushButton() {
-  window.alert("puto");
+function tiempo() {
+  document.getElementById("demo").innerHTML = Date();
 }
