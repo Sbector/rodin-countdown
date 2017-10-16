@@ -13,6 +13,8 @@ window.addEventListener('resize', function(){
   camera.updateProjectionMatrix();
 });
 
+controls = new THREE.OrbitControls(camera, renderer.domElement);
+
 // Geometría
 var geometry = new THREE.BoxGeometry(1,1,1);
 
@@ -24,8 +26,8 @@ scene.add(cube);
 camera.position.z = 3;
 
 var update = function(){
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.005;
+  // cube.rotation.x += 0.01;
+  // cube.rotation.y += 0.005;
 };
 
 var render = function(){
