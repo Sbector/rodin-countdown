@@ -11,30 +11,23 @@
 	<script src="libraries/p5.dom.js"></script>
 	<script src="libraries/p5.sound.js"></script>
 	<script src="sketch.js"></script>
-	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	<style>
-		body {
-			margin:0;
-			padding:0;
-			overflow: hidden;
-		}
-		canvas {
-			margin:auto;
-		}
-	</style>
+
 </head>
-<script>
-$(document).ready(function(){
-  $("p").on('click touchstart', function(){
-    $(this).hide();
-  })
-})
-</script>
 <body>
-	<p id="demo">Putini</p>
-	<!-- <button type="button" onclick="tiempo()">Pruebame</button> -->
+	<div id="del-contdown">
+			<h1>Public domain countdown</h1>
+			<div id="clock"></div>
+			<div id="units">
+				<span>Days</span>
+				<span>Hours</span>
+				<span>Minutes</span>
+				<span>Seconds</span>
+			</div>
+	</div>
+
+	<script src="script.js"></script>
 </body>
 </html>
