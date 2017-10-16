@@ -1,3 +1,4 @@
+// La parte de javaScript relativa al conteo regresivo proviene de: https://github.com/iamshaunjp/js-tricks-countdown
 
 function updateTimer(deadline){
   var time = deadline - new Date();
@@ -11,12 +12,12 @@ function updateTimer(deadline){
 }
 
 
-function animateClock(span){
-  span.className = "turn";
-  setTimeout(function(){
-    span.className = "";
-  },700);
-}
+// function animateClock(span){
+//   span.className = "turn";
+//   setTimeout(function(){
+//     span.className = "";
+//   },700);
+// }
 
 function startTimer(id, deadline){
   var timerInterval = setInterval(function(){
@@ -28,12 +29,12 @@ function startTimer(id, deadline){
                     + '<span>' + timer.minutes + '</span>'
                     + '<span>' + timer.seconds + '</span>';
 
-    //animations
-    var spans = clock.getElementsByTagName("span");
-    animateClock(spans[3]);
-    if(timer.seconds == 59) animateClock(spans[2]);
-    if(timer.minutes == 59 && timer.seconds == 59) animateClock(spans[1]);
-    if(timer.hours == 23 && timer.minutes == 59 && timer.seconds == 59) animateClock(spans[0]);
+    // //animations
+    // var spans = clock.getElementsByTagName("span");
+    // animateClock(spans[3]);
+    // if(timer.seconds == 59) animateClock(spans[2]);
+    // if(timer.minutes == 59 && timer.seconds == 59) animateClock(spans[1]);
+    // if(timer.hours == 23 && timer.minutes == 59 && timer.seconds == 59) animateClock(spans[0]);
 
     //check for end of timer
     if(timer.total < 1){
