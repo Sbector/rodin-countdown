@@ -1,5 +1,7 @@
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+// var helper = new THREE.CameraHelper( camera );
+// scene.add( helper );
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -13,10 +15,8 @@ window.addEventListener('resize', function(){
   camera.updateProjectionMatrix();
 });
 
+// Controls
 controls = new THREE.OrbitControls(camera, renderer.domElement);
-
-// Geometría
-// var geometry = new THREE.BoxGeometry(1,1,1);
 
 // Modelo
 var loader = new THREE.JSONLoader();
@@ -26,20 +26,14 @@ function handle_load(geometry, materials){
   var material = new THREE.MeshNormalMaterial();
   var mesh = new THREE.Mesh(geometry, material);
   scene.add(mesh);
-  mesh.position.z = -15;
   mesh.position.y = -5;
 }
 
-// Material
-// var material = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true});
-// var cube = new THREE.Mesh(geometry, material);
-// scene.add(cube);
-
-camera.position.z = 3;
+// Camera Position
+camera.position.z = 15;
 
 var update = function(){
-  // cube.rotation.x += 0.01;
-  // cube.rotation.y += 0.005;
+
 };
 
 var render = function(){
