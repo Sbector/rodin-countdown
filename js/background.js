@@ -26,8 +26,8 @@ function handle_load(geometry, materials){
   var material = new THREE.MeshNormalMaterial();
   var mesh = new THREE.Mesh(geometry, material);
   scene.add(mesh);
-  mesh.position.z = -20;
-  mesh.position.y = -15;
+  mesh.position.z = -15;
+  mesh.position.y = -5;
 }
 
 // Material
