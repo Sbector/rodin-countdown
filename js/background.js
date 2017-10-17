@@ -16,12 +16,23 @@ window.addEventListener('resize', function(){
 controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 // Geometría
-var geometry = new THREE.BoxGeometry(1,1,1);
+// var geometry = new THREE.BoxGeometry(1,1,1);
+
+// Modelo
+var loader = new THREE.JSONLoader();
+loader.load('model/cari.json', handle_load);
+
+function handle_load(geometry, materials){
+  var material = new THREE.MeshNormalMaterial();
+  var mesh = new THREE.Mesh(geometry, material);
+  scene.add(mesh);
+  mesh.position.z = -10;
+}
 
 // Material
-var material = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true});
-var cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+// var material = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true});
+// var cube = new THREE.Mesh(geometry, material);
+// scene.add(cube);
 
 camera.position.z = 3;
 
